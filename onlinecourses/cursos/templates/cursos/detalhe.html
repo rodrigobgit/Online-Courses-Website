@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends "./base.html" %}
+
+{% block conteudo %}
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-6">
+      {% if request.user.is_superuser %}
+      <form method="POST" action="{% url 'cursos:deletecurso' curso.pk %}">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Delete Course</button>
+      </form>
+      {% endif %}
+
+        <h1 class="text-white">{{ curso.descricao }}</h1>
+        <p class="text-white">Price:{{ curso.preco }}€</p>
+        <p class="text-white">Sales: {{ vendas }}</p>
+        <p class="text-white">Area: {{ curso.area }}</p>
+        <img src="{{ curso.image.url }}" height="200" width="200" alt="Imagem do curso">
+        <h2 class="text-white mt-2">Contents</h2>
+          {% if conteudos %}
+          <ul class="text-white">
+          {% for conteudo in conteudos %}
+          <h2 class="text-white" sytle="font-size: 24px;" >{{ conteudo.title }}</h2>
+            <a href="{{ conteudo.file.url }}" class="text-white"> Click to get the file</a>
+
+          {% endfor %}
+        </ul>
+
+      {% else %}
+        <p class="text-white">No content on this course yet.</p>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+</body>
+</html>

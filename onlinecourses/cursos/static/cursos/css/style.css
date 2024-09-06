@@ -1,0 +1,549 @@
+
+
+body {
+	background: url(../../../static/cursos/images/ruido.png),
+				linear-gradient(50deg,#ff4169,#7c26f8);
+	background-attachment: fixed;
+	font-family: Helvetica,Arial,sans-serif;
+}
+
+/*Barra de navegaçao
+--------------------------*/
+nav.navbar-transparente {
+	padding: 15px 0px;
+	background: rgb(0,0,0,0.6);
+
+}
+
+.navbar-light .navbar-nav .nav-link {
+	color: white;
+}
+
+.navbar-light .navbar-nav .nav-link:hover{
+	color:#9bf0e1;
+}
+
+.navbar-light .navbar-toggler {
+	color: rgb(255,255,255,.5);
+	border-color:rgba(255,255,255,.5);
+}
+
+.nav-item .divisor {
+	width: 1px;
+	background: white;
+	margin: 12px 15px;
+}
+.form-inline {
+
+  display: inline-block;
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 20px;
+}
+
+.form-inline input[type="text"] {
+  border: none;
+  outline: none;
+  font-size: 18px;
+  padding: 5px;
+  width: 200px;
+  float: left;
+}
+
+.form-inline button.btn-success {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  float: left;
+  margin-left: 10px;
+  cursor: pointer;
+}
+/*
+ Container dos cursos
+*/
+.container_cursos {
+        /*border: 1px solid red;*/
+        padding: 10px;
+
+
+      }
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+.container_cursos h1 {
+	font-weight: 450;
+	letter-spacing: -0.05em;
+	margin-bottom: 50px;
+	color: white;
+
+}
+
+/*
+**** Login Container ****
+*/
+
+.container_login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+	margin-bottom: 300px;
+
+}
+
+.container_login form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.container_login label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.container_login input[type="text"],
+.container_login input[type="password"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.container_login input[type="submit"] {
+  padding: 10px;
+  background-color: #7c25f8;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.container_login input[type="submit"]:hover {
+  background-color: black;
+}
+
+.container_login button[type="button"] {
+  padding: 10px;
+  background-color: #7c25f8;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.container_login button[type="button"]:hover {
+  background-color: #ffca28;
+}
+
+.container_login h2 {
+	text-align: center;
+}
+
+
+.application-card {
+  width: 300px;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  box-shadow: 2px 2px 5px #ddd;
+}
+
+.application-card h2 {
+  font-size: 24px;
+  margin-top: 0;
+}
+
+.application-card p {
+  margin: 10px 0;
+}
+
+.application-card p strong {
+  font-weight: bold;
+}
+
+.application-card p a {
+  color: blue;
+  text-decoration: underline;
+}
+
+
+/*Configuraçao padrao da página
+--------------------------------*/
+
+body, html {
+	margin: 0;
+	font: 16px "Lato", sans-serif;
+	color: #777;
+	height: 100%;
+
+}
+
+.conteudo {
+	color: #777;
+	background-color: white;
+	text-align: justify;
+	padding: 50px 80px;
+}
+
+h3 {
+	text-transform: uppercase;
+	color: #111;
+	text-align: center;
+}
+
+p {
+	margin-bottom: 20px;
+
+}
+
+.caixa1 .conteudo-titulo span.titulo  a {
+	text-decoration: none;
+	color: #fff;
+}
+
+/*Efeito Parallax
+-------------------*/
+.caixa1, .caixa2, .caixa3, .caixa4{
+	position: relative;
+
+	height: 100%;
+	opacity: 0.7;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+.caixa1 {
+	background-image: url(../../../static/cursos/images/imagem1.jpg);
+
+}
+
+.caixa2 {
+	background-image: url(../../../static/cursos/images/imagem2.jpg);
+
+}
+
+.caixa3 {
+	background-image: url(../../../static/cursos/images/imagem7.jpg);
+
+}
+.caixa4 {
+	background-image: url(../../../static/cursos/images/imagem4.jpg);
+
+}
+
+.conteudo-titulo {
+	position: absolute;
+	left: 0%;
+	top:45%;
+	width: 100%;
+	text-align: center;
+
+}
+
+.conteudo-titulo span.titulo {
+	color: #fff;
+	background-color: #111;
+	padding: 18px;
+	font-size: 25px;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+
+}
+
+/*Capa
+-----------------*/
+
+
+html, body, #home {
+	height: 100%;
+	overflow-x:hidden;
+
+}
+
+
+.capa_menu {
+	text-align: center;
+
+
+}
+
+.btn-custom {
+	color: white;
+	border-radius:500px;
+	-webkit-border-radius: 500px;
+	-moz-border-radius:500px;
+	text-transform: uppercase;
+	transition: background 0.4s,color 0.4s;
+	padding: 10px 20px;
+}
+
+.btn-roxo {
+	background:#7c25f8;
+}
+
+.btn-roxo:hover {
+	background:#6207e3;
+	color: white;
+}
+.btn-branco {
+	border: 2px solid white;
+}
+.btn-branco:hover{
+	background-color: white;
+	color: black;
+}
+
+
+/* Estrutura conteúdos
+-----------------*/
+.caixa {
+	padding-top: 20px;
+	padding-bottom: 20px;
+
+}
+#servicos {
+	background: white;
+	text-align: center;
+
+}
+
+#servicos h2, h3 {
+	color: #7c25f8;
+}
+
+#recursos {
+	color: white;
+}
+
+#recursos h3{
+	color: #9df0e1;
+}
+
+#recursos h2{
+	color: white;
+}
+
+.albuns {
+	padding: 10px 0px;
+}
+
+/*Rodape
+-------------------*/
+
+footer {
+	background: #000;
+	padding: 50px 0px 20px 0;
+	position: relative;
+}
+
+footer h4 {
+	color: #919496;
+	font-size: 0.8em;
+	text-transform: uppercase;
+}
+
+footer .navbar-nav a {
+	color:white;
+	text-decoration: none;
+
+}
+
+footer .navbar-nav a:hover {
+	color:#9bf0e1;
+	font-size: 0.8em;
+
+}
+
+footer ul {
+	list-style: none;
+}
+
+footer ul li {
+	float: right;
+	margin: 0 10px;
+}
+
+
+/*Tipografia
+-------------------*/
+
+h1 {
+	font-weight: 900;
+	letter-spacing: -0.05em;
+	margin-bottom: 50px;
+	color: white;
+}
+
+h2 {
+	font-size: 3em;
+	font-weight: 700;
+	letter-spacing: -0.04em
+}
+
+h3 {
+	font-size: 2em;
+	font-weight: 700;
+	letter-spacing: -0.04em
+}
+h5 {
+	font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: white;
+  margin-bottom: 20px;
+
+}
+
+
+/* Regist Teacher*/
+.form-button{
+   padding: 10px;
+  background-color: #7c25f8;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+}
+.form-label{
+
+     color: white;
+     font-weight: bold;
+     margin-bottom: 3px;
+}
+
+.container-form{
+padding-left:100px;
+}
+
+label{
+	color:white;
+
+
+}
+
+.padding-top {
+  padding-top: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+	.btn-custom {
+		margin: 10px 15px;
+		font-size: 1em;
+	}
+}
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+	h1 {
+		font-size: 3em;
+	}
+
+	.btn-custom {
+		margin: 10px 15px;
+	}
+ }
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+	h1 {
+		font-size: 4em;
+	}
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+	h1 {
+		font-size: 5em;
+	}
+ }
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+	h1 {
+		font-size: 6em;
+	}
+}
+
+/*search*/
+
+
+.card-curso-view .card-body * {
+opacity:0;
+transition:opacity 500ms ease;
+
+
+}
+
+.card-curso-view:hover .card-body * {
+
+opacity:1;
+
+}
+
+.card-body-content{
+background: rgba(255,255,255,0.7);
+padding-inline: 10px;
+position: absolute;
+left:0;
+right:0;
+top:50%;
+
+}
+
+.card-body{
+background-size:contain;
+background-repeat: no-repeat;
+background-position:center;
+position: relative;
+height:200px;
+}
+
+.card-body h5 {
+
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  margin-bottom: 20px;
+
+}
+
+
+
+
+
+
+
+

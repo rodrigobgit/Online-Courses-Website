@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{% extends "./base.html" %}
+{% block conteudo %}
+<div class="container-form">
+<div class="row">
+   <h1>Manage Professors</h1>
+{% if error_message %}
+        <script>
+        alert("{{ error_message }}");
+
+    </script>
+
+{% endif %}
+</div>
+ <div class="row text-align:center">
+  <h2 style="color:white">Create Professor</h2>
+ </div>
+
+    <div class="row">
+
+    <div    class="form-group">
+  <form method="POST" action="{% url 'cursos:createprof' %}">
+    {% csrf_token %}
+
+        <div class="padding-top">
+            <label for="emailcreate">Email:</label>
+
+        </div>
+
+            <input type="email" class="form-control" id="emailcreate" name="emailcreate">
+
+
+
+        <div class="padding-top">
+            <label for="username">Username:</label>
+
+        </div>
+            <input type="text"  class="form-control" name="username" id="username">
+
+
+
+
+    <div class="padding-top">
+        <label for="password">Password:</label>
+    </div>
+    <input type="password"  class="form-control  padding-top" name="password" id="password">
+    <div class="padding-top">
+        <button type="submit" class="form-button">Create Professor</button>
+    </div>
+
+
+  </form>
+    </div>
+</div>
+<div class=" row">
+
+    <div class="mt-5">
+
+        <h2 style="color:white">Delete Professor</h2>
+    </div>
+    </div>
+    <div class="row">
+
+   <div class="form-goup">
+  <form method="POST" action="{% url 'cursos:deleteprof' %}">
+    {% csrf_token %}
+       <div class="padding-top">
+        <label for="emaildelete" class="form-lable">Email:</label>
+       </div>
+       <input type="email"  class="form-control" id="emaildelete" name="emaildelete">
+       <div class="padding-top">
+            <button type="submit" class="form-button">Delete Professor</button>
+       </div>
+  </form>
+    </div>
+         </div>
+    <br>
+{% endblock %}
+
+</div>
+</body>
+</html>

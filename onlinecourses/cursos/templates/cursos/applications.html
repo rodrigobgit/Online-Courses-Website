@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends "./base.html" %}
+{% block conteudo%}
+{% for application in applications %}
+<div class="application-card">
+        <h2 class="text-white">{{ application.first_name }} {{ application.last_name }}</h2>
+        <p class="text-white"><strong>Email:</strong> {{ application.email }}</p>
+        <p class="text-white"><strong>Phone Number:</strong> {{ application.phone_number }}</p>
+        <p class="text-white"><strong>Area of Expertise:</strong> {{ application.area_of_expertise }}</p>
+        <p class="text-white"><strong>Certification:</strong> <a href="{{ application.certification.url }}">{{ application.certification.name }}</a></p>
+         <a href="{% url 'cursos:send_email' application.id %}"><button>Accept</button></a>
+        <a href="{% url 'cursos:delapplication' application.id %}"><button>Revoke</button></a>
+</div>
+
+
+{% endfor %}
+
+{% endblock %}
+</body>
+</html>

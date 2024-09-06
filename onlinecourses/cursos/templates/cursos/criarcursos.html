@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Criar Curso</title>
+</head>
+<body>
+
+{% extends "./base.html" %}
+{% block conteudo%}
+<div class="container">
+  <h1>Create Course</h1>
+
+  <div class="form-group">
+    <form method="POST" action="{% url 'cursos:submitcurso' %}" enctype="multipart/form-data">
+      {% csrf_token %}
+      <label  for="descricao">Description</label>
+      <input  class="form-control col-6" type="text" id="descricao" name="descricao" required>
+       <br>
+      <label for="preco">Price</label>
+      <input  class="form-control  col-6" type="number" id="preco" name="preco"  step="any" required>
+      <br>
+      <label  for="image">Image(optional)</label>
+      <input  class=" row col-6" type="file" id="image" name="image">
+      <h2 style="color:white">Contents</h2>
+      <div id="conteudos">
+
+          <label for="titulo-conteudo">Title</label>
+          <input  class="form-control col-6"  type="text" id="titulo-conteudo" name="titulo_conteudo[]" required>
+          <label class=" mt-2" for="conteudo">Content</label>
+          <input  class=" row col-6"  type="file" id="conteudo" name="conteudo[]" required>
+          <br>
+      </div>
+    <div class="col-6">
+      <button   type="button" onclick="adicionarConteudo()" class="form-button col-4">Add contents</button>
+      <br><br>
+      <button  type="submit" class= "form-button col-4">Create Course</button>
+    </div>
+
+    </form>
+
+  </div>
+</div>
+
+  <script>
+    function adicionarConteudo() {
+      var conteudos = document.getElementById("conteudos");
+      var conteudo = document.createElement("div");
+
+      conteudo.innerHTML = '<label for="titulo-conteudo">Title</label>' +
+                            '<input  class="form-control col-6"  type="text" id="titulo-conteudo" name="titulo_conteudo[]" required>' +
+                            '<label for="conteudo">Content</label>' +
+                            '<input  class="col-6 mt-2"  type="file" id="conteudo" name="conteudo[]" required>' +
+                            '<br>';
+      conteudos.appendChild(conteudo);
+    }
+  </script>
+{% endblock %}
+</body>
+</html>
